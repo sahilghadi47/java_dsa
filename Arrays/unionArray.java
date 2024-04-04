@@ -26,28 +26,38 @@ public class findUnion {
         return Ans;
     }
     static ArrayList<Integer> optimal(int arr1[], int arr2[]) {
-        //Using HashSet 
-        //time complexity == (m + n) 
+        // Using two Pointer approach
+        // time complexity == (m + n)
         ArrayList<Integer> Ans = new ArrayList<>();
-        int i=0;
-        int j =0;
-        while(i<arr1.length && j<arr2.length){
-            if(arr1[i]<=arr2[j]){
-                Ans.add(arr1[i]);
-                i++;
-            }else{
-                Ans.add(arr2[j]);
-                j++;
+        int i = 0;
+        int j = 0;
+        while (i < arr1.length && j < arr2.length) {
+            if (arr1[i] <= arr2[j]){ 
+                if (Ans.size() == 0 || Ans.get(Ans.size() - 1) != arr1[i]) 
+                    Ans.add(arr1[i]);
+                    i++;
+                
+            } else {
+                if (Ans.size() == 0 || Ans.get(Ans.size() - 1) != arr2[j]) 
+
+                    Ans.add(arr2[j]);
+                    j++;
+                
             }
 
         }
-        while (i<arr1.length) {
-            Ans.add(arr1[i]);
+        while (i < arr1.length) {
+            if (Ans.get(Ans.size() - 1) != arr1[i]) 
+                Ans.add(arr1[i]);
             i++;
+
+
         }
-        while(j<arr2.length){
-            Ans.add(arr2[j]);
+        while (j < arr2.length) {
+            if (Ans.get(Ans.size() - 1) != arr2[j]) 
+                Ans.add(arr2[j]);
             j++;
+
         }
         return Ans;
     }
