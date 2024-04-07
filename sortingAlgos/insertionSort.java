@@ -1,39 +1,36 @@
 package sortingAlgos;
 
-public class insertionSort {
 
-    static void sol(int arr[]) {
-        int n = arr.length;
-        int i = 1;
-        while (i < n) {
-            int temp = arr[i];
-            int j = i - 1;
-            while (j >= 0) {
-                if (arr[j] > temp)
-                    arr[j + 1] = arr[j];
-                else
-                    break;
+public class InsertionSort {
+
+    void swap(int arr[], int j){
+        int temp =arr[j];
+        arr[j] =arr[j-1];
+        arr[j-1] = temp;
+    }
+    void sort(int arr[], int n){ //ITERATIVE FUNCTION()
+        for(int i =0;i<n;i++){
+            int j =i;
+            while(j>0 && arr[j-1]>arr[j]){
+                swap(arr, j);
                 j--;
             }
-            arr[j + 1] = temp;
-            i++;
         }
+    }
+    void sort(int arr[] , int i, int n){//RECURSIVE FUNCTION()
+        if(i==n) return;
+        int j =i;
+            while(j>0 && arr[j-1]>arr[j]){
+                swap(arr, j);
+                j--;
+            }
+        sort(arr,i+1,n);
+    }
 
+    public static void main(String[] args) {
+        int arr[] = {3,5,2,4,6,2,1,4,7,5};
+        InsertionSort ans = new InsertionSort();
+        ans.sort(arr,0, arr.length);
+        printArray.sol(arr);
     }
-    
-    static void recursive(int arr[], int size) {
-        if(size==0 ||size ==1) return;
-          
-        int s = arr.length - size + 1 ;
-        int temp = arr[s];
-        int j = s - 1;
-        while (j >= 0) {
-            if (arr[j] > temp)
-                arr[j + 1] = arr[j];
-            else
-                break;
-            j--;
-        }
-        arr[j + 1] = temp;
-        recursive(arr, size-1);
-    }
+}
