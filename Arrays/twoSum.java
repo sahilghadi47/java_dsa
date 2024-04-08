@@ -17,6 +17,20 @@ public class twoSum {
         }
         return ans;
     }
+    int[] Hashing(int arr[], int target) {
+        int ans[] = { -1, -1 };
+        HashMap<Integer, Integer> hs = new HashMap<>();
+        for (int i = 0; i < arr.length; i++) {
+            if (hs.containsKey(target - arr[i])) {
+                ans[0] = hs.get(target - arr[i]);
+                ans[1] = i;
+                return ans;
+
+            }
+            hs.put(arr[i], i);
+        }
+        return ans;
+    }
     public static void main(String[] args) {
         twoSum ans= new twoSum();
         int arr[] = {1,0,2,4,7,1};
