@@ -6,7 +6,7 @@
 // #         {6 5 4 }
 // #         {9 8 7 }
 
-package Arrays2D;
+package Arrays2d;
 
 public class reverseMatrix {
    static void reverse(int[][]matrix , int n){

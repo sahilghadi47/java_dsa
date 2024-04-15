@@ -1,6 +1,8 @@
 //find the largest element in th given array
 package Arrays;
 
+import java.util.Arrays;
+
 public class LargestElement {
   static int brute(int arr[]){
     //time complexity O(NlogN)
@@ -21,7 +23,7 @@ public class LargestElement {
    public static void main(String[] args) {
     
         int arr[] = { 1, 2, 3, 4,25, 6, 7, 8, 9, 10 };
-        System.out.println(brute(arr, arr.length));
+        System.out.println(brute(arr));
         
   }
 

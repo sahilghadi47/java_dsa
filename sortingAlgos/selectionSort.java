@@ -33,7 +33,7 @@ public class selectionSort{
         int arr[] = {3,5,2,4,6,2,56,1,4,6, 7,8,6,5};
         printArray.sol(arr);
         System.out.println();
-        SelectionSort ans = new SelectionSort();
+        selectionSort ans = new selectionSort();
         ans.sort(arr,arr.length);
         printArray.sol(arr);
     }

@@ -3,6 +3,8 @@
 // We cannot use the element at a given index twice.
 package Arrays;
 
+import java.util.HashMap;
+
 public class twoSum {
     int[] brute(int arr[] ,int n){
         int[] ans={-1,-1};

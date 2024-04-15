@@ -8,7 +8,7 @@
 
 
 
-package Arrays2D;
+package Arrays2d;
 
 
 

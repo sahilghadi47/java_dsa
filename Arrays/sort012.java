@@ -1,8 +1,7 @@
 package Arrays;
 
-import java.util.Arrays;
-
 public class sort012 {
+    
     static void brute(int arr[]){
         // Arrays.sort(arr);
         
@@ -11,7 +10,7 @@ public class sort012 {
         int zero=0;
         int one=0;
         int two=0;
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < n; i++) {
             if(arr[i]==0) zero++;
             if(arr[i]==1) one++;
             if(arr[i]==2) two++;
@@ -23,7 +22,7 @@ public class sort012 {
         for(i=zero;i<zero+one;i++){
             arr[i]=1;
         }
-        for(i=zero+one;i<n;i++){
+        for(i=zero+one;i<zero+one+two;i++){
             arr[i]=2;
         }
     }

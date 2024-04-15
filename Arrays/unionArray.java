@@ -7,7 +7,7 @@ package Arrays;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class findUnion {
+public class unionArray {
 
     static ArrayList<Integer> brute(int arr1[], int arr2[]) {
         //Using HashSet 
@@ -62,7 +62,7 @@ public class findUnion {
         return Ans;
     }
     public static void main(String[] args) {
-        int arr1[] = { ,1 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        int arr1[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         int arr2[] = { 2, 3, 4, 4, 5, 11, 12 };
         ArrayList<Integer> Union = optimal(arr1, arr2);
         for (int val : Union)

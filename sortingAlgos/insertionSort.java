@@ -1,7 +1,7 @@
 package sortingAlgos;
 
 
-public class InsertionSort {
+public class insertionSort {
 
     void swap(int arr[], int j){
         int temp =arr[j];
@@ -29,7 +29,7 @@ public class InsertionSort {
 
     public static void main(String[] args) {
         int arr[] = {3,5,2,4,6,2,1,4,7,5};
-        InsertionSort ans = new InsertionSort();
+        insertionSort ans = new insertionSort();
         ans.sort(arr,0, arr.length);
         printArray.sol(arr);
     }

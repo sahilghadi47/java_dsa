@@ -6,7 +6,7 @@
 //         {8 5 2 }
 //         {9 6 3 }
 
-package Arrays2D;
+package Arrays2d;
 
 public class rotateMatrix {
     static void brute(int [] [] matrix){
