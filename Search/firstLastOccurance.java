@@ -1,6 +1,5 @@
 package Search;
 
-import Arrays.removeDuplicate;
 
 public class firstLastOccurance {
     static int first (int arr[], int k){
@@ -33,7 +32,7 @@ public class firstLastOccurance {
             else low = mid+1;
         }
         
-        return high;
+        return res;
     }
     static int [] firstLast(int arr[] , int k){
         int first =first(arr, k);
