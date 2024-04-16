@@ -1,9 +1,6 @@
 package Search;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 8cdaa8ad412ea8ee0793799a12efe6969c07edb7
 public class firstLastOccurance {
     static int first (int arr[], int k){
         int low =0;
