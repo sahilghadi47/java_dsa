@@ -7,7 +7,7 @@ package Strings;
 // Given a valid parentheses string s, consider its primitive decomposition: s = P1 + P2 + ... + Pk, where Pi are primitive valid parentheses strings.
 
 // Return s after removing the outermost parentheses of every primitive string in the primitive decomposition of s.
-public class vaildParenthesis {
+public class validParenthesis {
     static String vaild(String str){
         StringBuilder sb = new StringBuilder();
         int count=0;
